@@ -37,8 +37,7 @@ void Circle::updateFromArea() {
 void Circle::setRadius(double r) {
   if (r < 0) {
     radius = 0;
-  }
-  else {
+  } else {
     radius = r;
   }
   updateFromRadius();
@@ -47,8 +46,7 @@ void Circle::setRadius(double r) {
 void Circle::setFerence(double f) {
   if (f < 0) {
     ference = 0;
-  }
-  else {
+  } else {
     ference = f;
   }
   updateFromFerence();
@@ -57,8 +55,7 @@ void Circle::setFerence(double f) {
 void Circle::setArea(double a) {
   if (a < 0) {
     area = 0;
-  }
-  else {
+  } else {
     area = a;
   }
   updateFromArea();
