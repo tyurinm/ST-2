@@ -56,8 +56,8 @@ TEST(CircleTests, SetFerenceTest) {
   c.setFerence(10.0);
   EXPECT_NEAR(c.getFerence(), 10.0, 1e-9);
   EXPECT_NEAR(c.getRadius(), 10.0 / (2.0 * M_PI), 1e-9);
-  EXPECT_NEAR(c.getArea(), M_PI * (10.0 / (2.0 * M_PI)) * 
-	  (10.0 / (2.0 * M_PI)), 1e-9);
+  EXPECT_NEAR(c.getArea(), M_PI * (10.0 / (2.0 * M_PI)) *
+    (10.0 / (2.0 * M_PI)), 1e-9);
 }
 
 TEST(CircleTests, SetAreaTest) {
@@ -149,8 +149,8 @@ TEST(TasksTests, CalculatePoolCostsTest) {
   double pavingCost = 1000.0;
   double fenceCost = 2000.0;
 
-  double totalCost = calculatePoolCosts(poolRadius, pathWidth, 
-	  pavingCost, fenceCost);
+  double totalCost = calculatePoolCosts(poolRadius, pathWidth,
+    pavingCost, fenceCost);
 
   Circle pool(poolRadius);
   Circle full(poolRadius + pathWidth);
@@ -158,8 +158,8 @@ TEST(TasksTests, CalculatePoolCostsTest) {
   double expectedPavingArea = full.getArea() - pool.getArea();
   double expectedFenceLength = full.getFerence();
 
-  double expectedTotalCost = (expectedPavingArea * pavingCost) + 
-	  (expectedFenceLength * fenceCost);
+  double expectedTotalCost = (expectedPavingArea * pavingCost) +
+    (expectedFenceLength * fenceCost);
 
   EXPECT_NEAR(totalCost, expectedTotalCost, 1e-6);
 }
@@ -170,8 +170,8 @@ TEST(TasksTests, CalculatePoolCostsZeroRadiusTest) {
   double pavingCost = 1000.0;
   double fenceCost = 2000.0;
 
-  double totalCost = calculatePoolCosts(poolRadius, pathWidth, 
-	  pavingCost, fenceCost);
+  double totalCost = calculatePoolCosts(poolRadius, pathWidth,
+    pavingCost, fenceCost);
 
   Circle pool(poolRadius);
   Circle full(poolRadius + pathWidth);
@@ -179,8 +179,8 @@ TEST(TasksTests, CalculatePoolCostsZeroRadiusTest) {
   double expectedPavingArea = full.getArea() - pool.getArea();
   double expectedFenceLength = full.getFerence();
 
-  double expectedTotalCost = (expectedPavingArea * pavingCost) + 
-	  (expectedFenceLength * fenceCost);
+  double expectedTotalCost = (expectedPavingArea * pavingCost) +
+    (expectedFenceLength * fenceCost);
 
   EXPECT_NEAR(totalCost, expectedTotalCost, 1e-6);
 }
@@ -191,8 +191,8 @@ TEST(TasksTests, CalculatePoolCostsLargeRadiusTest) {
   double pavingCost = 1000.0;
   double fenceCost = 2000.0;
 
-  double totalCost = calculatePoolCosts(poolRadius, pathWidth, 
-	  pavingCost, fenceCost);
+  double totalCost = calculatePoolCosts(poolRadius, pathWidth,
+    pavingCost, fenceCost);
 
   Circle pool(poolRadius);
   Circle full(poolRadius + pathWidth);
@@ -200,8 +200,8 @@ TEST(TasksTests, CalculatePoolCostsLargeRadiusTest) {
   double expectedPavingArea = full.getArea() - pool.getArea();
   double expectedFenceLength = full.getFerence();
 
-  double expectedTotalCost = (expectedPavingArea * pavingCost) + 
-	  (expectedFenceLength * fenceCost);
+  double expectedTotalCost = (expectedPavingArea * pavingCost) +
+    (expectedFenceLength * fenceCost);
 
   EXPECT_NEAR(totalCost, expectedTotalCost, 1e-6);
 }
@@ -212,8 +212,8 @@ TEST(TasksTests, CalculatePoolCostsNoPathTest) {
   double pavingCost = 1000.0;
   double fenceCost = 2000.0;
 
-  double totalCost = calculatePoolCosts(poolRadius, pathWidth, 
-	  pavingCost, fenceCost);
+  double totalCost = calculatePoolCosts(poolRadius, pathWidth,
+    pavingCost, fenceCost);
 
   Circle pool(poolRadius);
   Circle full(poolRadius + pathWidth);
@@ -221,8 +221,8 @@ TEST(TasksTests, CalculatePoolCostsNoPathTest) {
   double expectedPavingArea = full.getArea() - pool.getArea();
   double expectedFenceLength = full.getFerence();
 
-  double expectedTotalCost = (expectedPavingArea * pavingCost) + 
-	  (expectedFenceLength * fenceCost);
+  double expectedTotalCost = (expectedPavingArea * pavingCost) +
+    (expectedFenceLength * fenceCost);
 
   EXPECT_NEAR(totalCost, expectedTotalCost, 1e-6);
 }
@@ -233,8 +233,8 @@ TEST(TasksTests, CalculatePoolCostsZeroPathWidthTest) {
   double pavingCost = 500.0;
   double fenceCost = 1500.0;
 
-  double totalCost = calculatePoolCosts(poolRadius, pathWidth, 
-	  pavingCost, fenceCost);
+  double totalCost = calculatePoolCosts(poolRadius, pathWidth,
+    pavingCost, fenceCost);
 
   Circle pool(poolRadius);
   Circle full(poolRadius + pathWidth);
@@ -242,8 +242,8 @@ TEST(TasksTests, CalculatePoolCostsZeroPathWidthTest) {
   double expectedPavingArea = full.getArea() - pool.getArea();
   double expectedFenceLength = full.getFerence();
 
-  double expectedTotalCost = (expectedPavingArea * pavingCost) + 
-	  (expectedFenceLength * fenceCost);
+  double expectedTotalCost = (expectedPavingArea * pavingCost) +
+    (expectedFenceLength * fenceCost);
 
   EXPECT_NEAR(totalCost, expectedTotalCost, 1e-6);
 }
@@ -254,8 +254,8 @@ TEST(TasksTests, CalculatePoolCostsLargePathWidthTest) {
   double pavingCost = 1000.0;
   double fenceCost = 2000.0;
 
-  double totalCost = calculatePoolCosts(poolRadius, pathWidth, 
-	  pavingCost, fenceCost);
+  double totalCost = calculatePoolCosts(poolRadius, pathWidth,
+    pavingCost, fenceCost);
 
   Circle pool(poolRadius);
   Circle full(poolRadius + pathWidth);
@@ -263,8 +263,8 @@ TEST(TasksTests, CalculatePoolCostsLargePathWidthTest) {
   double expectedPavingArea = full.getArea() - pool.getArea();
   double expectedFenceLength = full.getFerence();
 
-  double expectedTotalCost = (expectedPavingArea * pavingCost) + 
-	  (expectedFenceLength * fenceCost);
+  double expectedTotalCost = (expectedPavingArea * pavingCost) +
+    (expectedFenceLength * fenceCost);
 
   EXPECT_NEAR(totalCost, expectedTotalCost, 1e-6);
 }

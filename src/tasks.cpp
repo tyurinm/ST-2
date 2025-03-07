@@ -10,8 +10,8 @@ double calculateRopeGap(double additionalLength) {
   return earth.getRadius() - earthRadius;
 }
 
-double calculatePoolCosts(double poolRadius, double pathWidth, 
-	double pavingCost, double fenceCost) {
+double calculatePoolCosts(double poolRadius, double pathWidth,
+  double pavingCost, double fenceCost) {
   Circle pool(poolRadius);
   Circle full(poolRadius + pathWidth);
 
